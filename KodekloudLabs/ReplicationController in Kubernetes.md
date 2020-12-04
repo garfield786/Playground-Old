@@ -1,6 +1,9 @@
+# ReplicationController in Kubernetes
+
 - create a file rc.yml in the home directory
 - `vi ~/rc.yml`
 - and paste the following yaml script in it
+
 ```YAML
 apiVersion: v1
 kind: ReplicationController
@@ -19,11 +22,15 @@ spec:
         - name: httpd-container
           image: httpd
 ```
+
 - run the following command:
+
 ```bash
 kubectl create -f ~/rc.yml
 ```
+
 - check the pods with the below command and wait until they are create and are 1/1 Ready
+
 ```bash
 kubectl get pods
 ```

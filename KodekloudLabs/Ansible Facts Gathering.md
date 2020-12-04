@@ -1,5 +1,8 @@
+# Ansible Facts Gathering
+
 - Create a yaml file as `index.yml` with the blow contents:
 - `vi index.yml`
+
 ``` YAML
 ---
   - hosts: stapp01,stapp02,stapp03
@@ -25,6 +28,7 @@
           name: httpd
           state: started
 ```
+
 - save and exit `:wq`
 - Run the ansible playbook:
 - `ansible-playbook -I inventory index.yml`

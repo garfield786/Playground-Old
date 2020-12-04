@@ -1,3 +1,5 @@
+# Puppet Setup Database
+
 - create the required .pp file on the manifests location and paste in the following code:
 - "Change the DB Parameters below with the correct ones"
 
