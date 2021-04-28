@@ -40,6 +40,7 @@ spec:
     targetPort: 16379
 ---
 EOF
+kubectl apply -f redis-cluster-service.yaml
 cat << EOF > redis-cluster.yaml
 ---
 apiVersion: apps/v1
@@ -87,4 +88,5 @@ spec:
         accessModes:
           - "ReadWriteOnce"
 EOF
+kubectl apply -f redis-cluster.yaml
 ```

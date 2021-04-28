@@ -19,3 +19,6 @@ class symlink {
     }
 }
 ```
+
+- ssh to all app servers, elevate to root and run the following command:
+- `puppet agent -tv`

@@ -1,0 +1,21 @@
+version: "2.2"
+services:
+  php_web:
+    container_name: php_web
+    image: php:apache
+    ports:
+      - 6100:80
+    volumes:
+      - /var/www/html:/var/www/html
+  mysql_web:
+    container_name: mysql_web
+    image: mariadb:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=database_web
+      - MYSQL_USER=user_web
+      - MYSQL_PASSWORD=P@@$$w0rd?
+      - MYSQL_RANDOM_ROOT_PASSWORD=1
